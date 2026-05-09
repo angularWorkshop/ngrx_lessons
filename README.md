@@ -1,17 +1,9 @@
-# HTML & CSS Bootcamp — Lessons
+# EduTec NgRx Lessons
 
-Practice exercises for the HTML & CSS course on [EduTec](https://edutec.work).
+Practice repository for the NgRx course on EduTec.
 
-## Structure
+Generated sections: 15
+Generated topics: 47
+Generated exercises: 94
 
-Each exercise lives in its own branch:
-- `lesson-topic-XX-exercise-YY-slug` — starter code with TODO comments
-- `answer-topic-XX-exercise-YY-slug` — complete solution
-
-## How to use
-
-1. Clone the repo
-2. Checkout the lesson branch: `git checkout lesson-topic-01-exercise-01-first-page`
-3. Open `index.html` in your browser
-4. Follow the instructions in `README.md`
-5. Check the answer branch when done
+Each exercise has a starter branch and an answer branch.
