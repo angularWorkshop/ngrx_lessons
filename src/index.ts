@@ -15,9 +15,9 @@ export const exerciseContract = {
   topic: "State в Angular: local, shared, server и URL-state",
   exercise: "Переписать хаотичный service-state в понятную модель loading/error/empty/success.",
   requiredArtifacts: [
-  "route state",
-  "router selector",
-  "url-driven view"
+  "request status model",
+  "empty/error branch",
+  "success branch"
 ] as const,
 } as const;
 
@@ -41,10 +41,10 @@ export function completeNgrxExercise(): NgrxExerciseResult {
     feature: "state v angular local shared serve",
     status: "completed",
     implementedArtifacts: [
-  "route state",
-  "router selector",
-  "url-driven view"
+  "request status model",
+  "empty/error branch",
+  "success branch"
 ],
-    notes: "NgRx state flow is completed for this exercise: the state boundary, typed contract, and UI projection are explicit.",
+    notes: "NgRx request flow is completed for this exercise: the state boundary, typed contract, and UI projection are explicit.",
   };
 }

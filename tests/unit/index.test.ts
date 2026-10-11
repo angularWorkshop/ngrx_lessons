@@ -6,7 +6,7 @@ describe("Переписать хаотичный service-state в понятн�
     expect(exerciseContract.course).toBe('NGRX');
     expect(exerciseContract.topic).toBe("State в Angular: local, shared, server и URL-state");
     expect(exerciseContract.exercise).toBe("Переписать хаотичный service-state в понятную модель loading/error/empty/success.");
-    expect([...exerciseContract.requiredArtifacts]).toEqual(["route state","router selector","url-driven view"]);
+    expect([...exerciseContract.requiredArtifacts]).toEqual(["request status model","empty/error branch","success branch"]);
   });
 
   it('starts from a draft plan before implementation', () => {
@@ -25,8 +25,8 @@ describe("Переписать хаотичный service-state в понятн�
     const result = completeNgrxExercise();
 
     expect(result.status).toBe('completed');
-    expect(result.implementedArtifacts).toEqual(["route state","router selector","url-driven view"]);
+    expect(result.implementedArtifacts).toEqual(["request status model","empty/error branch","success branch"]);
     expect(result.notes.toLowerCase()).toContain('ngrx');
-    expect(result.notes.toLowerCase()).toContain("state");
+    expect(result.notes.toLowerCase()).toContain("request");
   });
 });
