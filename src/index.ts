@@ -15,9 +15,9 @@ export const exerciseContract = {
   topic: "Runtime checks, serializability и meta-reducers на старте",
   exercise: "Написать meta-reducer для audit-log действий без изменения feature reducers.",
   requiredArtifacts: [
-  "event action",
-  "pure reducer",
-  "immutable state update"
+  "serializable state",
+  "runtime guard",
+  "audit meta-reducer"
 ] as const,
 } as const;
 
@@ -41,10 +41,10 @@ export function completeNgrxExercise(): NgrxExerciseResult {
     feature: "runtime checks serializability i m",
     status: "completed",
     implementedArtifacts: [
-  "event action",
-  "pure reducer",
-  "immutable state update"
+  "serializable state",
+  "runtime guard",
+  "audit meta-reducer"
 ],
-    notes: "NgRx reducer flow is completed for this exercise: the state boundary, typed contract, and UI projection are explicit.",
+    notes: "NgRx runtime flow is completed for this exercise: the state boundary, typed contract, and UI projection are explicit.",
   };
 }
