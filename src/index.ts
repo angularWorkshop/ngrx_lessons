@@ -15,9 +15,9 @@ export const exerciseContract = {
   topic: "Reducer как чистая функция перехода состояния",
   exercise: "Исправить reducer, который мутирует массив и ломает memoized selectors.",
   requiredArtifacts: [
-  "source selector",
-  "derived selector",
-  "view model"
+  "event action",
+  "pure reducer",
+  "immutable state update"
 ] as const,
 } as const;
 
