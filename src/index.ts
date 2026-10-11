@@ -15,9 +15,9 @@ export const exerciseContract = {
   topic: "Подключение NgRx в standalone Angular-приложении",
   exercise: "Подключить provideStore и provideStoreDevtools в стартовом Angular-приложении.",
   requiredArtifacts: [
-  "runtime guard",
-  "debug signal",
-  "production-safe config"
+  "root store provider",
+  "devtools setup",
+  "runtime check boundary"
 ] as const,
 } as const;
 

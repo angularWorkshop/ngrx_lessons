@@ -4,15 +4,15 @@ Starter branch for the EduTec NgRx course.
 
 ## Why this exercise exists
 
-Production-safe store — это store, который можно диагностировать, но который не тащит в прод тяжёлые инструменты без нужды.
+На этапе setup проверяем wiring, а не пытаемся решать всю архитектуру фичи сразу.
 
 Visual flow:
 
 ```text
-DevTools action log
-  -> find duplicate or missing event
-  -> inspect state diff
-  -> fix the real flow, not the symptom
+app bootstrap
+  -> provideStore(...)
+  -> provide feature state near feature boundary
+  -> app can read registered state
 ```
 
 ## Topic
@@ -29,10 +29,10 @@ DevTools action log
 - Complete `completeNgrxExercise()`.
 - Return `status: 'completed'`.
 - Keep the expected artifacts:
-- `runtime guard`
-- `debug signal`
-- `production-safe config`
-- Add a note that mentions `NgRx` and `state`.
+- `root store provider`
+- `devtools setup`
+- `runtime check boundary`
+- Add a note that mentions `NgRx` and `setup`.
 - Save the file and wait for the StackBlitz status runner.
 
 ## Expected result shape
@@ -44,8 +44,8 @@ return {
   exercise: "Подключить provideStore и provideStoreDevtools в стартовом Angular-приложении.",
   feature: '...',
   status: 'completed',
-  implementedArtifacts: ["runtime guard","debug signal","production-safe config"],
-  notes: 'NgRx state flow is completed ...',
+  implementedArtifacts: ["root store provider","devtools setup","runtime check boundary"],
+  notes: 'NgRx setup flow is completed ...',
 };
 ```
 

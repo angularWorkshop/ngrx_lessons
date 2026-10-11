@@ -6,7 +6,7 @@ describe("Подключить provideStore и provideStoreDevtools в стар�
     expect(exerciseContract.course).toBe('NGRX');
     expect(exerciseContract.topic).toBe("Подключение NgRx в standalone Angular-приложении");
     expect(exerciseContract.exercise).toBe("Подключить provideStore и provideStoreDevtools в стартовом Angular-приложении.");
-    expect([...exerciseContract.requiredArtifacts]).toEqual(["runtime guard","debug signal","production-safe config"]);
+    expect([...exerciseContract.requiredArtifacts]).toEqual(["root store provider","devtools setup","runtime check boundary"]);
   });
 
   it('starts from a draft plan before implementation', () => {
@@ -25,8 +25,8 @@ describe("Подключить provideStore и provideStoreDevtools в стар�
     const result = completeNgrxExercise();
 
     expect(result.status).toBe('completed');
-    expect(result.implementedArtifacts).toEqual(["runtime guard","debug signal","production-safe config"]);
+    expect(result.implementedArtifacts).toEqual(["root store provider","devtools setup","runtime check boundary"]);
     expect(result.notes.toLowerCase()).toContain('ngrx');
-    expect(result.notes.toLowerCase()).toContain("state");
+    expect(result.notes.toLowerCase()).toContain("setup");
   });
 });
