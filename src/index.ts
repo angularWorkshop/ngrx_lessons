@@ -15,9 +15,9 @@ export const exerciseContract = {
   topic: "Подключение NgRx в standalone Angular-приложении",
   exercise: "Добавить feature provider для CoursesFeature рядом с routes и проверить регистрацию state.",
   requiredArtifacts: [
-  "state boundary",
-  "typed contract",
-  "ui projection"
+  "feature provider",
+  "feature state key",
+  "registration check"
 ] as const,
 } as const;
 
@@ -41,10 +41,10 @@ export function completeNgrxExercise(): NgrxExerciseResult {
     feature: "podklyuchenie ngrx v standalone an",
     status: "completed",
     implementedArtifacts: [
-  "state boundary",
-  "typed contract",
-  "ui projection"
+  "feature provider",
+  "feature state key",
+  "registration check"
 ],
-    notes: "NgRx state flow is completed for this exercise: the state boundary, typed contract, and UI projection are explicit.",
+    notes: "NgRx setup flow is completed for this exercise: the state boundary, typed contract, and UI projection are explicit.",
   };
 }

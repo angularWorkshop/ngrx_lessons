@@ -6,7 +6,7 @@ describe("Добавить feature provider для CoursesFeature рядом с 
     expect(exerciseContract.course).toBe('NGRX');
     expect(exerciseContract.topic).toBe("Подключение NgRx в standalone Angular-приложении");
     expect(exerciseContract.exercise).toBe("Добавить feature provider для CoursesFeature рядом с routes и проверить регистрацию state.");
-    expect([...exerciseContract.requiredArtifacts]).toEqual(["state boundary","typed contract","ui projection"]);
+    expect([...exerciseContract.requiredArtifacts]).toEqual(["feature provider","feature state key","registration check"]);
   });
 
   it('starts from a draft plan before implementation', () => {
@@ -25,8 +25,8 @@ describe("Добавить feature provider для CoursesFeature рядом с 
     const result = completeNgrxExercise();
 
     expect(result.status).toBe('completed');
-    expect(result.implementedArtifacts).toEqual(["state boundary","typed contract","ui projection"]);
+    expect(result.implementedArtifacts).toEqual(["feature provider","feature state key","registration check"]);
     expect(result.notes.toLowerCase()).toContain('ngrx');
-    expect(result.notes.toLowerCase()).toContain("state");
+    expect(result.notes.toLowerCase()).toContain("setup");
   });
 });

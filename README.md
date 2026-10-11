@@ -4,15 +4,15 @@ Answer branch for the EduTec NgRx course.
 
 ## Why this exercise exists
 
-Если значение должно пережить reload страницы и быть доступным по ссылке — сначала посмотри в сторону route/query params.
+На этапе setup проверяем wiring, а не пытаемся решать всю архитектуру фичи сразу.
 
 Visual flow:
 
 ```text
-/courses/ngrx?tab=lessons
-  -> selectRouteParam('courseId')
-  -> selectQueryParam('tab')
-  -> selectCoursePageVm
+app bootstrap
+  -> provideStore(...)
+  -> provide feature state near feature boundary
+  -> app can read registered state
 ```
 
 ## Topic
@@ -29,10 +29,10 @@ Visual flow:
 - Complete `completeNgrxExercise()`.
 - Return `status: 'completed'`.
 - Keep the expected artifacts:
-- `state boundary`
-- `typed contract`
-- `ui projection`
-- Add a note that mentions `NgRx` and `state`.
+- `feature provider`
+- `feature state key`
+- `registration check`
+- Add a note that mentions `NgRx` and `setup`.
 - Save the file and wait for the StackBlitz status runner.
 
 ## Expected result shape
@@ -44,8 +44,8 @@ return {
   exercise: "Добавить feature provider для CoursesFeature рядом с routes и проверить регистрацию state.",
   feature: '...',
   status: 'completed',
-  implementedArtifacts: ["state boundary","typed contract","ui projection"],
-  notes: 'NgRx state flow is completed ...',
+  implementedArtifacts: ["feature provider","feature state key","registration check"],
+  notes: 'NgRx setup flow is completed ...',
 };
 ```
 
