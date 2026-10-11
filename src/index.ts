@@ -15,9 +15,9 @@ export const exerciseContract = {
   topic: "Подключение NgRx в standalone Angular-приложении",
   exercise: "Добавить feature provider для CoursesFeature рядом с routes и проверить регистрацию state.",
   requiredArtifacts: [
-  "state boundary",
-  "typed contract",
-  "ui projection"
+  "feature provider",
+  "feature state key",
+  "registration check"
 ] as const,
 } as const;
 
