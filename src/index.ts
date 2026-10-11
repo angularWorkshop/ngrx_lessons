@@ -15,9 +15,9 @@ export const exerciseContract = {
   topic: "Runtime checks, serializability и meta-reducers на старте",
   exercise: "Написать meta-reducer для audit-log действий без изменения feature reducers.",
   requiredArtifacts: [
-  "event action",
-  "pure reducer",
-  "immutable state update"
+  "serializable state",
+  "runtime guard",
+  "audit meta-reducer"
 ] as const,
 } as const;
 
