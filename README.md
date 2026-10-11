@@ -1,18 +1,18 @@
-# Исправить компонент, который напрямую мутирует список, заменив это на dispatch и selector.
+# Исправить компонент, который напрямую мутирует список, заменив это на явное событие и чтение готовых данных.
 
 Starter branch for the EduTec NgRx course.
 
 ## Why this exercise exists
 
-Если в компоненте появляется несколько select подряд и ручная сборка объекта — просится один view-model selector.
+На раннем этапе достаточно назвать шаги flow и не пытаться сразу реализовать всю инфраструктуру.
 
 Visual flow:
 
 ```text
-raw store state
-  -> source selectors
-  -> derived selectors
-  -> one VM selector for the component
+user event
+  -> action describes what happened
+  -> state transition updates the model
+  -> view reads the result
 ```
 
 ## Topic
@@ -21,7 +21,7 @@ NgRx как event-driven модель: action → reducer → selector → view
 
 ## Task
 
-Исправить компонент, который напрямую мутирует список, заменив это на dispatch и selector.
+Исправить компонент, который напрямую мутирует список, заменив это на явное событие и чтение готовых данных.
 
 ## What to finish
 
@@ -29,10 +29,10 @@ NgRx как event-driven модель: action → reducer → selector → view
 - Complete `completeNgrxExercise()`.
 - Return `status: 'completed'`.
 - Keep the expected artifacts:
-- `source selector`
-- `derived selector`
-- `view model`
-- Add a note that mentions `NgRx` and `selector`.
+- `user event`
+- `state transition`
+- `view update`
+- Add a note that mentions `NgRx` and `flow`.
 - Save the file and wait for the StackBlitz status runner.
 
 ## Expected result shape
@@ -41,11 +41,11 @@ NgRx как event-driven модель: action → reducer → selector → view
 return {
   course: 'NGRX',
   topic: "NgRx как event-driven модель: action → reducer → selector → view",
-  exercise: "Исправить компонент, который напрямую мутирует список, заменив это на dispatch и selector.",
+  exercise: "Исправить компонент, который напрямую мутирует список, заменив это на явное событие и чтение готовых данных.",
   feature: '...',
   status: 'completed',
-  implementedArtifacts: ["source selector","derived selector","view model"],
-  notes: 'NgRx selector flow is completed ...',
+  implementedArtifacts: ["user event","state transition","view update"],
+  notes: 'NgRx flow flow is completed ...',
 };
 ```
 

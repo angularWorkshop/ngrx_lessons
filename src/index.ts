@@ -13,11 +13,11 @@ export interface NgrxExerciseResult {
 export const exerciseContract = {
   course: 'NGRX',
   topic: "NgRx как event-driven модель: action → reducer → selector → view",
-  exercise: "Исправить компонент, который напрямую мутирует список, заменив это на dispatch и selector.",
+  exercise: "Исправить компонент, который напрямую мутирует список, заменив это на явное событие и чтение готовых данных.",
   requiredArtifacts: [
-  "source selector",
-  "derived selector",
-  "view model"
+  "user event",
+  "state transition",
+  "view update"
 ] as const,
 } as const;
 
