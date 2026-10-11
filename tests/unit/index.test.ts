@@ -6,7 +6,7 @@ describe("Включить runtime checks и исправить state/action, г
     expect(exerciseContract.course).toBe('NGRX');
     expect(exerciseContract.topic).toBe("Runtime checks, serializability и meta-reducers на старте");
     expect(exerciseContract.exercise).toBe("Включить runtime checks и исправить state/action, где лежит несерилизируемое значение.");
-    expect([...exerciseContract.requiredArtifacts]).toEqual(["event action","pure reducer","immutable state update"]);
+    expect([...exerciseContract.requiredArtifacts]).toEqual(["serializable state","runtime guard","audit meta-reducer"]);
   });
 
   it('starts from a draft plan before implementation', () => {
@@ -25,8 +25,8 @@ describe("Включить runtime checks и исправить state/action, г
     const result = completeNgrxExercise();
 
     expect(result.status).toBe('completed');
-    expect(result.implementedArtifacts).toEqual(["event action","pure reducer","immutable state update"]);
+    expect(result.implementedArtifacts).toEqual(["serializable state","runtime guard","audit meta-reducer"]);
     expect(result.notes.toLowerCase()).toContain('ngrx');
-    expect(result.notes.toLowerCase()).toContain("reducer");
+    expect(result.notes.toLowerCase()).toContain("runtime");
   });
 });

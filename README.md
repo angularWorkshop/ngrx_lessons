@@ -4,15 +4,15 @@ Answer branch for the EduTec NgRx course.
 
 ## Why this exercise exists
 
-Production-safe store — это store, который можно диагностировать, но который не тащит в прод тяжёлые инструменты без нужды.
+В Store должны попадать serializable данные, а не Date, DOM-события, class instances или функции.
 
 Visual flow:
 
 ```text
-DevTools action log
-  -> find duplicate or missing event
-  -> inspect state diff
-  -> fix the real flow, not the symptom
+action/state value
+  -> runtime checks inspect it
+  -> unsafe mutation or non-serializable data fails early
+  -> fix the model before it reaches production
 ```
 
 ## Topic
@@ -29,10 +29,10 @@ Runtime checks, serializability и meta-reducers на старте
 - Complete `completeNgrxExercise()`.
 - Return `status: 'completed'`.
 - Keep the expected artifacts:
-- `event action`
-- `pure reducer`
-- `immutable state update`
-- Add a note that mentions `NgRx` and `reducer`.
+- `serializable state`
+- `runtime guard`
+- `audit meta-reducer`
+- Add a note that mentions `NgRx` and `runtime`.
 - Save the file and wait for the StackBlitz status runner.
 
 ## Expected result shape
@@ -44,8 +44,8 @@ return {
   exercise: "Включить runtime checks и исправить state/action, где лежит несерилизируемое значение.",
   feature: '...',
   status: 'completed',
-  implementedArtifacts: ["event action","pure reducer","immutable state update"],
-  notes: 'NgRx reducer flow is completed ...',
+  implementedArtifacts: ["serializable state","runtime guard","audit meta-reducer"],
+  notes: 'NgRx runtime flow is completed ...',
 };
 ```
 
