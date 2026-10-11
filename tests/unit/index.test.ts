@@ -6,7 +6,7 @@ describe("Спроектировать CoursesState для списка курс
     expect(exerciseContract.course).toBe('NGRX');
     expect(exerciseContract.topic).toBe("Форма feature-state: что хранить, а что вычислять");
     expect(exerciseContract.exercise).toBe("Спроектировать CoursesState для списка курсов, фильтра и выбранного курса.");
-    expect([...exerciseContract.requiredArtifacts]).toEqual(["state boundary","typed contract","ui projection"]);
+    expect([...exerciseContract.requiredArtifacts]).toEqual(["source state shape","derived data boundary","selected id"]);
   });
 
   it('starts from a draft plan before implementation', () => {
@@ -25,7 +25,7 @@ describe("Спроектировать CoursesState для списка курс
     const result = completeNgrxExercise();
 
     expect(result.status).toBe('completed');
-    expect(result.implementedArtifacts).toEqual(["state boundary","typed contract","ui projection"]);
+    expect(result.implementedArtifacts).toEqual(["source state shape","derived data boundary","selected id"]);
     expect(result.notes.toLowerCase()).toContain('ngrx');
     expect(result.notes.toLowerCase()).toContain("state");
   });

@@ -15,9 +15,9 @@ export const exerciseContract = {
   topic: "Форма feature-state: что хранить, а что вычислять",
   exercise: "Спроектировать CoursesState для списка курсов, фильтра и выбранного курса.",
   requiredArtifacts: [
-  "state boundary",
-  "typed contract",
-  "ui projection"
+  "source state shape",
+  "derived data boundary",
+  "selected id"
 ] as const,
 } as const;
 
@@ -41,9 +41,9 @@ export function completeNgrxExercise(): NgrxExerciseResult {
     feature: "forma feature state chto hranit a",
     status: "completed",
     implementedArtifacts: [
-  "state boundary",
-  "typed contract",
-  "ui projection"
+  "source state shape",
+  "derived data boundary",
+  "selected id"
 ],
     notes: "NgRx state flow is completed for this exercise: the state boundary, typed contract, and UI projection are explicit.",
   };
