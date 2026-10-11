@@ -15,9 +15,9 @@ export const exerciseContract = {
   topic: "State в Angular: local, shared, server и URL-state",
   exercise: "Переписать хаотичный service-state в понятную модель loading/error/empty/success.",
   requiredArtifacts: [
-  "route state",
-  "router selector",
-  "url-driven view"
+  "request status model",
+  "empty/error branch",
+  "success branch"
 ] as const,
 } as const;
 

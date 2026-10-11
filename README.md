@@ -4,14 +4,15 @@ Starter branch for the EduTec NgRx course.
 
 ## Why this exercise exists
 
-Проверяй себя вопросом: кто должен помнить это значение, если компонент уничтожится и появится снова?
+Если несколько флагов могут противоречить друг другу, собери их в один явный status.
 
 Visual flow:
 
 ```text
-screen concern
-  -> local state / shared state / server state / URL state
-  -> only shared domain state goes to NgRx
+request starts
+  -> status: 'loading'
+  -> status: 'success' | 'empty' | 'error'
+  -> UI renders one clear branch
 ```
 
 ## Topic
@@ -28,10 +29,10 @@ State в Angular: local, shared, server и URL-state
 - Complete `completeNgrxExercise()`.
 - Return `status: 'completed'`.
 - Keep the expected artifacts:
-- `route state`
-- `router selector`
-- `url-driven view`
-- Add a note that mentions `NgRx` and `state`.
+- `request status model`
+- `empty/error branch`
+- `success branch`
+- Add a note that mentions `NgRx` and `request`.
 - Save the file and wait for the StackBlitz status runner.
 
 ## Expected result shape
@@ -43,8 +44,8 @@ return {
   exercise: "Переписать хаотичный service-state в понятную модель loading/error/empty/success.",
   feature: '...',
   status: 'completed',
-  implementedArtifacts: ["route state","router selector","url-driven view"],
-  notes: 'NgRx state flow is completed ...',
+  implementedArtifacts: ["request status model","empty/error branch","success branch"],
+  notes: 'NgRx request flow is completed ...',
 };
 ```
 
