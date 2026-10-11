@@ -15,9 +15,9 @@ export const exerciseContract = {
   topic: "Подключение NgRx в standalone Angular-приложении",
   exercise: "Подключить provideStore и provideStoreDevtools в стартовом Angular-приложении.",
   requiredArtifacts: [
-  "runtime guard",
-  "debug signal",
-  "production-safe config"
+  "root store provider",
+  "devtools setup",
+  "runtime check boundary"
 ] as const,
 } as const;
 
@@ -41,10 +41,10 @@ export function completeNgrxExercise(): NgrxExerciseResult {
     feature: "podklyuchenie ngrx v standalone an",
     status: "completed",
     implementedArtifacts: [
-  "runtime guard",
-  "debug signal",
-  "production-safe config"
+  "root store provider",
+  "devtools setup",
+  "runtime check boundary"
 ],
-    notes: "NgRx state flow is completed for this exercise: the state boundary, typed contract, and UI projection are explicit.",
+    notes: "NgRx setup flow is completed for this exercise: the state boundary, typed contract, and UI projection are explicit.",
   };
 }
