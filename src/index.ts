@@ -15,9 +15,9 @@ export const exerciseContract = {
   topic: "State в Angular: local, shared, server и URL-state",
   exercise: "Разобрать dashboard-фичу и разметить каждый кусок state по типу: local/shared/server/url.",
   requiredArtifacts: [
-  "route state",
-  "router selector",
-  "url-driven view"
+  "local state boundary",
+  "shared state boundary",
+  "server/url boundary"
 ] as const,
 } as const;
 

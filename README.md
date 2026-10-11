@@ -28,9 +28,9 @@ State в Angular: local, shared, server и URL-state
 - Complete `completeNgrxExercise()`.
 - Return `status: 'completed'`.
 - Keep the expected artifacts:
-- `route state`
-- `router selector`
-- `url-driven view`
+- `local state boundary`
+- `shared state boundary`
+- `server/url boundary`
 - Add a note that mentions `NgRx` and `state`.
 - Save the file and wait for the StackBlitz status runner.
 
@@ -43,7 +43,7 @@ return {
   exercise: "Разобрать dashboard-фичу и разметить каждый кусок state по типу: local/shared/server/url.",
   feature: '...',
   status: 'completed',
-  implementedArtifacts: ["route state","router selector","url-driven view"],
+  implementedArtifacts: ["local state boundary","shared state boundary","server/url boundary"],
   notes: 'NgRx state flow is completed ...',
 };
 ```
