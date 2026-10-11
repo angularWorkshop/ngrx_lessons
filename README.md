@@ -4,15 +4,15 @@ Answer branch for the EduTec NgRx course.
 
 ## Why this exercise exists
 
-Экран должен честно отвечать: мы грузим впервые, показываем старые данные и обновляемся в фоне, упали с ошибкой или уже успешно синхронизированы.
+Если в компоненте появляется несколько select подряд и ручная сборка объекта — просится один view-model selector.
 
 Visual flow:
 
 ```text
-idle
-  -> loading
-  -> success(data) / empty / error(message)
-  -> refresh keeps previous data when needed
+raw store state
+  -> source selectors
+  -> derived selectors
+  -> one VM selector for the component
 ```
 
 ## Topic
