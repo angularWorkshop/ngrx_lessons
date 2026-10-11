@@ -4,15 +4,15 @@ Answer branch for the EduTec NgRx course.
 
 ## Why this exercise exists
 
-Если в компоненте появляется несколько select подряд и ручная сборка объекта — просится один view-model selector.
+Reducer должен быть скучным, предсказуемым и проверяемым обычным unit-тестом.
 
 Visual flow:
 
 ```text
-raw store state
-  -> source selectors
-  -> derived selectors
-  -> one VM selector for the component
+previous state + action
+  -> pure calculation
+  -> new state object
+  -> selectors recalculate only what changed
 ```
 
 ## Topic
@@ -29,10 +29,10 @@ Reducer как чистая функция перехода состояния
 - Complete `completeNgrxExercise()`.
 - Return `status: 'completed'`.
 - Keep the expected artifacts:
-- `source selector`
-- `derived selector`
-- `view model`
-- Add a note that mentions `NgRx` and `selector`.
+- `event action`
+- `pure reducer`
+- `immutable state update`
+- Add a note that mentions `NgRx` and `reducer`.
 - Save the file and wait for the StackBlitz status runner.
 
 ## Expected result shape
@@ -44,8 +44,8 @@ return {
   exercise: "Исправить reducer, который мутирует массив и ломает memoized selectors.",
   feature: '...',
   status: 'completed',
-  implementedArtifacts: ["source selector","derived selector","view model"],
-  notes: 'NgRx selector flow is completed ...',
+  implementedArtifacts: ["event action","pure reducer","immutable state update"],
+  notes: 'NgRx reducer flow is completed ...',
 };
 ```
 

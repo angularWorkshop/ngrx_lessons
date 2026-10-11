@@ -15,9 +15,9 @@ export const exerciseContract = {
   topic: "Reducer как чистая функция перехода состояния",
   exercise: "Исправить reducer, который мутирует массив и ломает memoized selectors.",
   requiredArtifacts: [
-  "source selector",
-  "derived selector",
-  "view model"
+  "event action",
+  "pure reducer",
+  "immutable state update"
 ] as const,
 } as const;
 
@@ -41,10 +41,10 @@ export function completeNgrxExercise(): NgrxExerciseResult {
     feature: "reducer kak chistaya funkciya pere",
     status: "completed",
     implementedArtifacts: [
-  "source selector",
-  "derived selector",
-  "view model"
+  "event action",
+  "pure reducer",
+  "immutable state update"
 ],
-    notes: "NgRx selector flow is completed for this exercise: the state boundary, typed contract, and UI projection are explicit.",
+    notes: "NgRx reducer flow is completed for this exercise: the state boundary, typed contract, and UI projection are explicit.",
   };
 }

@@ -6,7 +6,7 @@ describe("Исправить reducer, который мутирует масси
     expect(exerciseContract.course).toBe('NGRX');
     expect(exerciseContract.topic).toBe("Reducer как чистая функция перехода состояния");
     expect(exerciseContract.exercise).toBe("Исправить reducer, который мутирует массив и ломает memoized selectors.");
-    expect([...exerciseContract.requiredArtifacts]).toEqual(["source selector","derived selector","view model"]);
+    expect([...exerciseContract.requiredArtifacts]).toEqual(["event action","pure reducer","immutable state update"]);
   });
 
   it('starts from a draft plan before implementation', () => {
@@ -25,8 +25,8 @@ describe("Исправить reducer, который мутирует масси
     const result = completeNgrxExercise();
 
     expect(result.status).toBe('completed');
-    expect(result.implementedArtifacts).toEqual(["source selector","derived selector","view model"]);
+    expect(result.implementedArtifacts).toEqual(["event action","pure reducer","immutable state update"]);
     expect(result.notes.toLowerCase()).toContain('ngrx');
-    expect(result.notes.toLowerCase()).toContain("selector");
+    expect(result.notes.toLowerCase()).toContain("reducer");
   });
 });
