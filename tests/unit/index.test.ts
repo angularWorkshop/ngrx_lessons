@@ -6,7 +6,7 @@ describe("Разобрать dashboard-фичу и разметить кажды
     expect(exerciseContract.course).toBe('NGRX');
     expect(exerciseContract.topic).toBe("State в Angular: local, shared, server и URL-state");
     expect(exerciseContract.exercise).toBe("Разобрать dashboard-фичу и разметить каждый кусок state по типу: local/shared/server/url.");
-    expect([...exerciseContract.requiredArtifacts]).toEqual(["route state","router selector","url-driven view"]);
+    expect([...exerciseContract.requiredArtifacts]).toEqual(["local state boundary","shared state boundary","server/url boundary"]);
   });
 
   it('starts from a draft plan before implementation', () => {
@@ -25,7 +25,7 @@ describe("Разобрать dashboard-фичу и разметить кажды
     const result = completeNgrxExercise();
 
     expect(result.status).toBe('completed');
-    expect(result.implementedArtifacts).toEqual(["route state","router selector","url-driven view"]);
+    expect(result.implementedArtifacts).toEqual(["local state boundary","shared state boundary","server/url boundary"]);
     expect(result.notes.toLowerCase()).toContain('ngrx');
     expect(result.notes.toLowerCase()).toContain("state");
   });
