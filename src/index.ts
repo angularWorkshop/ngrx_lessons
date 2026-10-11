@@ -15,9 +15,9 @@ export const exerciseContract = {
   topic: "Форма feature-state: что хранить, а что вычислять",
   exercise: "Спроектировать CoursesState для списка курсов, фильтра и выбранного курса.",
   requiredArtifacts: [
-  "state boundary",
-  "typed contract",
-  "ui projection"
+  "source state shape",
+  "derived data boundary",
+  "selected id"
 ] as const,
 } as const;
 
